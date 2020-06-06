@@ -1,22 +1,16 @@
-import arrayBufferToImage from './arrayBufferToImage.js';
-import createImage from './createImage.js';
-import { loadImage, configure } from './loadImage.js';
-import { external } from './externalModules.js';
+import arrayBufferToImage from "./arrayBufferToImage.js";
+import createImage from "./createImage.js";
+import { loadImage, configure } from "./loadImage.js";
+import { external } from "./externalModules.js";
 
-const cornerstoneWebImageLoader = {
+const cornerstoneFSImageLoader = {
   arrayBufferToImage,
   createImage,
   loadImage,
   configure,
-  external
+  external,
 };
 
-export {
-  arrayBufferToImage,
-  createImage,
-  loadImage,
-  configure,
-  external
-};
+export { arrayBufferToImage, createImage, loadImage, configure, external };
 
-export default cornerstoneWebImageLoader;
+export default cornerstoneFSImageLoader;

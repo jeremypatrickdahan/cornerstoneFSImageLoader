@@ -1,43 +1,46 @@
-const path = require('path');
+const path = require("path");
 const rootPath = process.cwd();
 const context = path.join(rootPath, "src");
-const outputPath = path.join(rootPath, 'dist');
-const bannerPlugin = require('./plugins/banner');
+const outputPath = path.join(rootPath, "dist");
+const bannerPlugin = require("./plugins/banner");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   context,
   entry: {
-    cornerstoneWebImageLoader: './index.js',
+    cornerstoneFSImageLoader: "./index.js",
   },
-  target: 'web',
+  target: "web",
   output: {
-    filename: '[name].js',
-    library: '[name]',
-    libraryTarget: 'umd',
+    filename: "[name].js",
+    library: "[name]",
+    libraryTarget: "umd",
     path: outputPath,
-    umdNamedDefine: true
+    umdNamedDefine: true,
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   externals: {},
   module: {
-    rules: [{
-      enforce: 'pre',
-      test: /\.js$/,
-      exclude: /(node_modules)/,
-      loader: 'eslint-loader',
-      options: {
-        failOnError: true
-      }
-    }, {
-      test: /\.js$/,
-      exclude: /(node_modules)/,
-      use: [{
-        loader: 'babel-loader'
-      }]
-    }]
+    rules: [
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        loader: "eslint-loader",
+        options: {
+          failOnError: true,
+        },
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: "babel-loader",
+          },
+        ],
+      },
+    ],
   },
-  plugins: [
-    bannerPlugin()
-  ]
+  plugins: [bannerPlugin()],
 };

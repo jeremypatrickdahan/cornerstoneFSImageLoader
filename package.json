@@ -1,7 +1,7 @@
 {
-  "name": "cornerstone-web-image-loader",
+  "name": "cornerstone-fs-image-loader",
   "version": "2.1.1",
-  "description": "Cornerstone ImageLoader for Web Images (PNG, JPG)",
+  "description": "Cornerstone ImageLoader for fs Images (PNG, JPG)",
   "keywords": [
     "medical",
     "imaging",
@@ -9,14 +9,13 @@
     "PNG",
     "cornerstone"
   ],
-  "author": "Chris Hafey",
-  "homepage": "https://github.com/cornerstonejs/cornerstoneWebImageLoader",
+  "homepage": "https://github.com/jeremypatrickdahan/cornerstoneFSImageLoader",
   "license": "MIT",
-  "main": "./dist/cornerstoneWebImageLoader.min.js",
-  "module": "./dist/cornerstoneWebImageLoader.min.js",
+  "main": "./dist/cornerstoneFSImageLoader.min.js",
+  "module": "./dist/cornerstoneFSImageLoader.min.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornerstonejs/cornerstoneWebImageLoader.git"
+    "url": "https://github.com/jeremypatrickdahan/cornerstoneFSImageLoader.git"
   },
   "scripts": {
     "build": "npm run test && npm run version && npm run webpack && npm run doc:generate",
@@ -75,5 +74,8 @@
     "webpack": "^4.5.0",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.1"
   }
 }

@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-expressions */
-import { expect } from 'chai';
+import { expect } from "chai";
 
-import * as cornerstoneWebImageLoader from '../src/index.js';
+import * as cornerstoneFSImageLoader from "../src/index.js";
 
-describe('A test that pulls in all modules', function () {
-  it('pulls in all modules', function () {
-    expect(cornerstoneWebImageLoader).to.exist;
+describe("A test that pulls in all modules", function() {
+  it("pulls in all modules", function() {
+    expect(cornerstoneFSImageLoader).to.exist;
   });
 });
